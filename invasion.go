@@ -70,9 +70,6 @@ func main() {
 				cityMap[newCity].aliens = append(cityMap[newCity].aliens, alienList[i])
 			}
 		}
-		for i := 0; i < len(alienList); i++ {
-			fmt.Println(alienList[i])
-		}
 
 		// Destroy each city with multiple aliens
 		for _, city := range cityMap {
@@ -90,6 +87,7 @@ func main() {
 		counter++
 	}
 
+	fmt.Println("Map after the invasion:")
 	for _, city := range cityMap {
 		if city.destroyed == false {
 			fmt.Print(city.name)
